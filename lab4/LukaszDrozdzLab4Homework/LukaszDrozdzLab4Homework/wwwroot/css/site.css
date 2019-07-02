@@ -1,0 +1,102 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/*meme thumbnail style*/
+.meme-thumbnail{
+    text-align: center;
+    width: 95%;
+    height: auto;
+}
+
+/*Make meme list content centered*/
+.meme-list{
+    justify-content:center;
+    align-self: center;
+    text-align:center;
+    margin: 0 0 0 0;
+}
+
+/*make meme description corners rounded*/
+.meme-description {
+    text-align: left;
+    border-radius: 3px;
+    font-family: Arial;
+    color: white;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*make page title centered and black*/
+.page-title {
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    color: black;
+}
+
+/*make background gray*/
+body {
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+/*format meme container*/
+.meme-container {
+    align-content: center;
+    margin: 5% 0 5% 0;
+    background: rgb(66,66,66);
+    font-family: 'Audiowide', cursive;
+    border-radius: 10px;
+    text-align: center;
+    width:75%;
+}
+
+/*Make all links white*/
+a{
+    color:white;
+}
+
+/*Make text fields gray with black text*/
+.text-field{
+    background-color: rgb(56, 56, 56);
+    color: black;
+    text-align:center;
+}
+
+/*Make form controls gray with white text*/
+.form-control{
+    background-color: rgb(32,32,32);
+    color:white;
+}

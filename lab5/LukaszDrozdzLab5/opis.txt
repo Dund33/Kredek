@@ -1,0 +1,3 @@
+﻿Pozwoliłem sobie nieco zmodyfikować projekt w stosunku do wersji z zajęć
+Folder nazywa się ...Lab4 bo mieliśmy go przekopiować a ja zapomniałem zmienić nazwę.
+Jak ją zmienię to projekt się wysypuje :/

@@ -1,0 +1,53 @@
+﻿@model MemeViewModel
+@{
+    ViewData["Title"] = "BrowseByID";
+}
+
+
+<!--Include scripts-->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <script src="~/js/site.js"></script>
+</head>
+
+
+<!--Required by bootstrap-->
+<div class="container">
+
+    <!--Present user with short page description-->
+    <div class="jumbotron page-title">
+        <h1>@ViewBag.Description</h1>
+    </div>
+
+    <!--Navbar-->
+    <ul class="nav nav-tabs">
+        <li>@Html.ActionLink("Index", "Index")</li>
+        <li class="active">@Html.ActionLink("Browse all", "Browse")</li>
+        <li>@Html.ActionLink("Search by description", "FindByDesc")</li>
+        <li>@Html.ActionLink("Suggest new meme", "SuggestNewMeme")</li>
+        <li>@Html.ActionLink("About", "About")</li>
+        <li>@Html.ActionLink("Contact", "Contact")</li>
+    </ul>
+
+    <!--Meme container-->
+    <div class="meme-container">
+        <!--Meme title-->
+        <h1>@Model.Title</h1>
+        <img class="meme-thumbnail img-rounded" src="@Model.Image" alt="@Model.Description" />
+
+
+    </div>
+
+    <div class="meme-description">
+        <div class="meme-descritpion meme-container">
+            <!--Meme description-->
+            <h2 style="text-align:left">Description:</h2>
+            @Model.Description
+        </div>
+    </div>
+
+
+
+</div>

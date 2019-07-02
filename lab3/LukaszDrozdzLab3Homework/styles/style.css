@@ -1,0 +1,58 @@
+/*set the font and the background*/
+body{
+    font-family: 'Righteous', cursive;
+    background-color: darkgray;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+/*make background a bit opaque*/
+body.background{
+    opacity: 30%;
+}
+
+/*making user input centered*/
+#search{
+    text-align: center;
+}
+
+/*make table headers a bit larger*/
+th{
+    font-size: 16pt;
+}
+
+/*style for the results table*/
+.table{
+    background-color: rgba(220,220,220,0.9);
+}
+
+/*overriding color on the navbar*/
+.navbar{
+    color: lightgray;
+}
+
+/*currently active page navbar style*/
+.current-nav{
+    color: blue;
+}
+
+/*not really sure if I want to keep it*/
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent;
+}
+
+.transparent-czech{
+    background: url(../images/czech-republic.png) no-repeat center center;
+	background-size: cover;
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.transparent-polish{
+    background: url(../images/poland.png) no-repeat center center;
+	background-size: cover;
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

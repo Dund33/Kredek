@@ -1,0 +1,60 @@
+﻿@model IEnumerable<LukaszDrozdzLab5Homework.Models.CoalBasicViewModel>
+
+@{
+    ViewData["Title"] = "Rodzaje Węgla";
+}
+
+<h2>Rodzaje węgla</h2>
+
+<!--Display basic info about the coal-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nazwa węgla
+            </th>
+            <th>
+                Ilość węgla
+            </th>
+            <th>
+                Cena węgla
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Sprzedaj", "SellCoal", new { coalID = item.ID })
+                    @Html.ActionLink("Sprzedaj anonimowo", "SellCoalAnonymously", new { coalID = item.ID })
+                    @Html.ActionLink("Szczegóły", "CoalDetails", new { coalID = item.ID })
+                    @Html.ActionLink("Dostawa", "CoalDelivery", new { coalID = item.ID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Display success message if needed-->
+<div>
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <p class="text-success">@ViewBag.SuccessMessage</p>
+    }
+</div>
+
+<!--Add new coal type-->
+<div>
+    @Html.ActionLink("Dodaj nowy rodzaj węgla", "AddNewCoal")
+</div>

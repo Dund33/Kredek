@@ -1,0 +1,4 @@
+CREATE TABLE CoalTypes (
+	ID int NOT NULL IDENTITY PRIMARY KEY,
+	CoalName nvarchar(63) NOT NULL,
+)

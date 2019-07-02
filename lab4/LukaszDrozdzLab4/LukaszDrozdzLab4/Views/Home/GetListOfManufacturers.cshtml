@@ -1,0 +1,14 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "GetListOfManufacturers";
+}
+
+<h2>GetListOfManufacturers</h2>
+<ul>
+@foreach (var manufacturer in Model)
+{
+    <li>@Html.ActionLink(manufacturer, "GetCarByManufacturer", "Home", new { manufacturer = manufacturer }, null)</li>
+}
+</ul>
+

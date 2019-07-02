@@ -1,0 +1,2 @@
+var translationsCzechJSON='{"trdlo": "kołacz", "ripadlo": "koparka","krtek": "krecik","holub": "gołąb","zdrvotné vyhybaský":"gimnastyka","kakaovy chlebicek":"murzynek"}';
+var translationsPolishJSON='{ "kołacz":"trdlo","koparka":"ripadlo","krecik":"krtek","gołąb": "holub","gimnastyka":"zdrvotné vyhybaský","murzynek":"kakaovy chlebicek"}';

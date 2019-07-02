@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div class="container">
+
+    <!--Navbar-->
+    <ul class="nav nav-tabs">
+        <li>@Html.ActionLink("Index", "Index")</li>
+        <li>@Html.ActionLink("Browse all", "Browse")</li>
+        <li>@Html.ActionLink("Search by description", "FindByDesc")</li>
+        <li>@Html.ActionLink("Suggest new meme", "SuggestNewMeme")</li>
+        <li class="active">@Html.ActionLink("About", "About")</li>
+        <li>@Html.ActionLink("Contact", "Contact")</li>
+    </ul>
+
+    <!--What? I'm a programmer not a writer-->
+    <p>Don't know what to say here</p>
+    <p>I guess I wrote this page.</p>
+    <p>I like <text style="color:green">turtles</text></p>
+</div>
+
+

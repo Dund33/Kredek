@@ -1,0 +1,96 @@
+﻿@model LukaszDrozdzLab5Homework.Models.CoalFullViewModel
+
+@{
+    ViewData["Title"] = "AddNewCoal";
+}
+
+<h2>Dodaj nowy rodzaj węgla</h2>
+
+<!--Present user with proper form-->
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddNewCoal">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Cena</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nazwa</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wex" class="control-label"></label>
+                <input asp-for="Wex" class="form-control" />
+                <span asp-validation-for="Wex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wa" class="control-label"></label>
+                <input asp-for="Wa" class="form-control" />
+                <span asp-validation-for="Wa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wtr" class="control-label"></label>
+                <input asp-for="Wtr" class="form-control" />
+                <span asp-validation-for="Wtr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ar" class="control-label"></label>
+                <input asp-for="Ar" class="form-control" />
+                <span asp-validation-for="Ar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Str" class="control-label"></label>
+                <input asp-for="Str" class="form-control" />
+                <span asp-validation-for="Str" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Std" class="control-label"></label>
+                <input asp-for="Std" class="form-control" />
+                <span asp-validation-for="Std" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vdaf" class="control-label"></label>
+                <input asp-for="Vdaf" class="form-control" />
+                <span asp-validation-for="Vdaf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ri" class="control-label"></label>
+                <input asp-for="Ri" class="form-control" />
+                <span asp-validation-for="Ri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qir" class="control-label"></label>
+                <input asp-for="Qir" class="form-control" />
+                <span asp-validation-for="Qir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Display success message if needed-->
+<div>
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <p class="text-success">@ViewBag.SuccessMessage</p>
+    }
+</div>
+
+<div>
+    <a asp-action="BrowseCoal">Wróć</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

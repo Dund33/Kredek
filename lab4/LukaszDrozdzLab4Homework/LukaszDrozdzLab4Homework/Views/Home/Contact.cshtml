@@ -1,0 +1,50 @@
+﻿@model LukaszDrozdzLab4Homework.Models.ContactFormViewModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h2>Contact</h2>
+<hr />
+
+<ul class="nav nav-tabs">
+    <li>@Html.ActionLink("Index", "Index")</li>
+    <li>@Html.ActionLink("Browse all", "Browse")</li>
+    <li>@Html.ActionLink("Search by description", "FindByDesc")</li>
+    <li>@Html.ActionLink("Suggest new meme", "SuggestNewMeme")</li>
+    <li>@Html.ActionLink("About", "About")</li>
+    <li class="active">@Html.ActionLink("Contact", "Contact")</liclass="active">
+</ul>
+
+@using (Html.BeginForm("Contact"))
+{
+
+    <!--Get data from user-->
+    <div class="form-horizontal">
+        <!--Name-->
+        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+
+        <!--Nachname-->
+        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+
+        <!--Desc-->
+        @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </div>
+
+    </div>
+}
+

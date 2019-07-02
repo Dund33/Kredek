@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<!--Some basic navigation stuff-->
+<div class="container">
+    <h2>Strona główna</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item">@Html.ActionLink("Przeglądaj węgiel", "BrowseCoal")</li>
+        <li class="list-group-item">@Html.ActionLink("Przeglądaj transakcje", "BrowseTransactions")</li>
+        <li class="list-group-item">@Html.ActionLink("Przeglądaj klientów", "BrowseClients")</li>
+    </ul>
+    
+    
+</div>
+

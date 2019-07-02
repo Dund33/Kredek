@@ -1,0 +1,72 @@
+﻿@model IEnumerable<LukaszDrozdzLab7Homework.Models.Cruiser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Lasers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlasmaGuns)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasStarDrive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TWR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thrust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lasers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlasmaGuns)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasStarDrive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TWR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thrust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a> |
+                <a asp-action="Basic" asp-route-id="@item.ID">Basic Info</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

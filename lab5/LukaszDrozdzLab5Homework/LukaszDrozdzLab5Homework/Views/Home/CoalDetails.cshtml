@@ -1,0 +1,76 @@
+﻿@model LukaszDrozdzLab5Homework.Models.CoalFullViewModel
+
+@{
+    ViewData["Title"] = "CoalDetails";
+}
+
+<h2>Szczegóły</h2>
+
+<!--Display basic info about the coal-->
+<div>
+    <hr />
+    <dl class="form-horizontal">
+      
+        <dt>Wilgotność przemijająca</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wex)
+        </dd>
+        <dt> Wilgotność analityczna</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wa)
+        </dd>
+        <dt>Wilgotność całkowita</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wtr)
+        </dd>
+        <dt>Zaw. popiołu w stanie roboczym</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ar)
+        </dd>
+        <dt>Zaw. popiołu w stanie suchym</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+        <dt>Zaw. siarki całkowitej w stanie roboczym</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Str)
+        </dd>
+        <dt>Zaw. siarki całkowitej w stanie suchym</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Std)
+        </dd>
+        <dt>Zaw. części lotnychw stanie suchym i bezpopiołowym</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vdaf)
+        </dd>
+        <dt>Roga Index</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ri)
+        </dd>
+        <dt>Wartość opałowa w stanie roboczym</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qir)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <!--Display success message if needed-->
+    <div>
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <p class="text-success">@ViewBag.SuccessMessage</p>
+        }
+    </div>
+
+    <!--Return to browsing coal-->
+    <a asp-action="BrowseCoal">Wróć</a>
+
+    <!--Handy navigation shortcuts-->
+    <div>
+        @Html.ActionLink("Edytuj Właściwości", "EditCoalCertificate", new { ID = Model.ID })
+        @Html.ActionLink("Edytuj", "EditCoal", new { ID = Model.ID })
+    </div>
+
+
+</div>

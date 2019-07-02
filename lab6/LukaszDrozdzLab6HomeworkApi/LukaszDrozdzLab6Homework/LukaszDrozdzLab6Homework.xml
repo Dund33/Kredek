@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LukaszDrozdzLab6Homework</name>
+    </assembly>
+    <members>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.#ctor">
+            <summary>
+            Contructor for the main meme controller
+            </summary>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.Auth(LukaszDrozdzLab6Homework.Models.UserAuthRequest)">
+            <summary>
+            Check authorization
+            Return single use token if authorized successfully
+            </summary>
+            <param name="user">Basic user credentials</param>
+            <returns></returns>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.AddUser(LukaszDrozdzLab6Homework.Models.User)">
+            <summary>
+            Add new user
+            </summary>
+            <param name="user">User credentials</param>
+            <returns></returns>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.AddMeme(LukaszDrozdzLab6Homework.Models.MemeSuggestion)">
+            <summary>
+            Upload a meme
+            </summary>
+            <param name="memeSuggestion">Meme suggestion object receiver from user</param>
+            <returns></returns>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.UpdateMeme(LukaszDrozdzLab6Homework.Models.MemeUpdate)">
+            <summary>
+            Update meme
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.GetAll">
+            <summary>
+            Get all the memes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.Get(System.String)">
+            <summary>
+            Get meme with specific ID
+            </summary>
+            <param name="id">Meme ID</param>
+            <returns></returns>
+            <remarks>
+            Used to get a meme with specific ID
+            </remarks>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Controllers.MemeController.RemoveMeme(LukaszDrozdzLab6Homework.Models.MemeRemovalSuggestion)">
+            <summary>
+            Remove meme with specific ID
+            </summary>
+            <param name="memeToRemove">Meme to be removed</param>
+            <returns></returns>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.Meme.ID">
+            <summary>
+            Meme ID
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.Meme.URL">
+            <summary>
+            Meme URL
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.Meme.Desc">
+            <summary>
+            Meme descirption
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.Meme.Title">
+            <summary>
+            Meme title
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeRemovalSuggestion.Token">
+            <summary>
+            Auth token
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeRemovalSuggestion.ID">
+            <summary>
+            Meme ID
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeSuggestion.Token">
+            <summary>
+            Server-generated auth token
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeSuggestion.URL">
+            <summary>
+            Meme url
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeSuggestion.Desc">
+            <summary>
+            Meme description
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeSuggestion.Title">
+            <summary>
+            Meme title
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeUpdate.ID">
+            <summary>
+            ID of the updated Meme
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeUpdate.Token">
+            <summary>
+            Server-generated token
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeUpdate.Title">
+            <summary>
+            New title
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeUpdate.URL">
+            <summary>
+            New url
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.MemeUpdate.Desc">
+            <summary>
+            New description
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.User.Username">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.User.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.User.Email">
+            <summary>
+            User's email
+            </summary>
+        </member>
+        <member name="M:LukaszDrozdzLab6Homework.Models.User.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Contructor for this class
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.UserAuthRequest.Username">
+            <summary>
+            User name
+            </summary>
+        </member>
+        <member name="P:LukaszDrozdzLab6Homework.Models.UserAuthRequest.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+    </members>
+</doc>

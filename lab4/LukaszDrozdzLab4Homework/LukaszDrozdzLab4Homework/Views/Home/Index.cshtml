@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--Include scripts-->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <script src="~/js/site.js"></script>
+</head>
+
+<div class="container">
+
+    <!--Page header-->
+    <div class="jumbotron page-title">
+        <h1>MemeDir</h1>
+    </div>
+
+    <!--Navbar-->
+    <ul class="nav nav-tabs">
+        <li class="active">@Html.ActionLink("Index", "Index")</li>
+        <li>@Html.ActionLink("Browse all", "Browse")</li>
+        <li>@Html.ActionLink("Search by description", "FindByDesc")</li>
+        <li>@Html.ActionLink("Suggest new meme", "SuggestNewMeme")</li>
+        <li>@Html.ActionLink("About", "About")</li>
+        <li>@Html.ActionLink("Contact", "Contact")</li>
+    </ul>
+
+    <h1>
+        Lorem ipsum dolor sit amet augue a nunc.
+        Etiam condimentum ligula, sit amet sapien eu dui quis orci lorem lorem pretium eget, nonummy commodo nec, nibh.
+        Ut consequat lorem sit amet mi quam congue odio non dolor.
+        Ut pretium. Vestibulum ante sit amet nibh.
+        Suspendisse elit.
+        Nunc a condimentum eget, purus.
+        Fusce enim.
+        Nunc in ornare a, pellentesque consectetuer, tellus malesuada fames ac nunc iaculis et,
+        placerat tempor pede bibendum vel, consectetuer at, consequat non, fringilla viverra elit.
+        Sed egestas risus arcu accumsan sit amet sapien et magnis dis parturient montes, nascetur ridiculus mus.
+        Fusce wisi eu libero. Aenean et ultrices posuere cubilia Curae, Duis non ante ante, tincidunt vehicula,
+        fringilla at, posuere cubilia Curae, Donec tortor. Nulla facilisi. Nullam risus ut diam.
+        Etiam aliquam odio. Nam tempor diam in faucibus volutpat, erat ornare eu, sem.
+        Mauris mattis nec, molestie sagittis. Nullam aliquet, purus est, dapibus aliquam.
+        Nunc velit sit amet sagittis vel, congue quis, massa. Nam id ligula.
+        Vivamus urna vitae ligula in faucibus orci molestie sagittis.
+        Nullam id leo semper risus.
+        Nunc in neque in lacus vestibulum suscipit.
+    </h1>
+
+</div>

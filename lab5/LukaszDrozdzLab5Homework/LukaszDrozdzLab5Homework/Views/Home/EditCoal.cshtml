@@ -1,0 +1,56 @@
+﻿@model LukaszDrozdzLab5Homework.Models.CoalBasicViewModel
+
+@{
+    ViewData["Title"] = "EditCoal";
+}
+
+<h2>Edytuj podstawowe właściwości</h2>
+<!--Edit coal properties-->
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditCoal">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label hidden"></label>
+                <input asp-for="ID" class="form-control hidden" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nazwa</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Amount" class="control-label">Ilość</label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Cena</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Zatwierdź" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Display success message if needed-->
+<div>
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <p class="text-success">@ViewBag.SuccessMessage</p>
+    }
+</div>
+
+<!--Return to browsing coal-->
+<div>
+    <a asp-action="BrowseCoal">Wróć do listy</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

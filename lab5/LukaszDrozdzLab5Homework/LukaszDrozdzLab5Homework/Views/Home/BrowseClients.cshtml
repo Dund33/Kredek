@@ -1,0 +1,58 @@
+﻿@model IEnumerable<LukaszDrozdzLab5Homework.Models.ClientViewModel>
+
+@{
+    ViewData["Title"] = "BrowseClients";
+}
+
+<h2>Przeglądaj Klientów</h2>
+
+<!--Present user with inforamtion about customers-->
+<p>
+    <a asp-action="AddClient">Dodaj nowego klienta</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Imię
+            </th>
+            <th>
+                Nazwisko
+            </th>
+            <th>
+                Adres
+            </th>
+            <th>
+                PESEL
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PESEL)
+            </td>
+            <td>
+                @Html.ActionLink("Nowe dane", "EditClient", new {  id=item.ID}) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

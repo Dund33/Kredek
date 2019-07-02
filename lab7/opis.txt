@@ -1,0 +1,7 @@
+﻿Aplikacja jest prostym systemem zarządzania Gwiezdną Flotą
+Flota składa się z niszczycieli i krążowników.
+Używane przeze mnie DTOs odpowiadają za transfer danych o krążownikach, niszczycielach i naprawach krążowników i niszczycieli.
+Mam nadzieję że wykonałem wszystko poprawnie i nie zapomniałem niczego skomentować.
+PS:
+Automatycznie wygenerowny kod pozostawiłem bez komentarzy bo na grupce dostałem kiedyś dobre info że nie musimy tego komentować.
+Całośc starałem się napisać tak żeby komentarze nie były potrzebne.

@@ -1,0 +1,13 @@
+﻿@model  CarViewModel
+@{
+    ViewData["Title"] = "GetCarByModel";
+}
+
+<h2>GetCarByModel</h2>
+
+<!--Display car info-->
+<h1>Produzent: @Model.Manufacturer</h1>
+<h2>Model: @Model.Model</h2>
+<h3>Preis: @Model.Price</h3>
+<img src="@Url.Content(Model.Photo)" alt="@Model.Model" />
+

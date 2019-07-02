@@ -1,0 +1,15 @@
+﻿@model List<CarViewModel>
+@{
+    ViewData["Title"] = "GetCarByManufacturer";
+}
+
+<!--Display the cars-->
+@foreach (var car in Model)
+{
+    <div>
+        <h2>@car.Model</h2>
+        <h4>Producent: @car.Manufacturer</h4>
+        <h4>Cena: @car.Price</h4>
+        <img src="@Url.Content(car.Photo)" alt="@car.Model" />
+    </div>
+}

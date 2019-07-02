@@ -1,0 +1,8 @@
+﻿Program jest prostym systemem obsługującym skład węgla.
+Podczas jego tworzenia konsultowałem się z osobami pracującymi w takich składach.
+Cały projekt programu skupiony jest wokół maksymalizowania przejrzystości i prostoty interfejsu.
+
+W bazie przechowywane są rodzaje węgla, transakcje, certyfikaty techniczne węgla, dostawy oraz dane nt ilości węgla.
+Użyłem dwóch widoków. Jednego aby wydobyć podstawowe dane nt. węgla. Drugiego aby uzyskać dane szczegółowe.
+
+Query użyte do utworzenia tabel oraz bazy umieściłem w katalogu LukaszDrozdzLab5Homework/skrypty

@@ -1,0 +1,55 @@
+﻿@model MemeViewModel
+@{
+    ViewData["Title"] = "FindByDesc";
+}
+
+<!--Include scripts-->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <script src="~/js/site.js"></script>
+</head>
+
+<!--required by boostrap-->
+<div class="container">
+
+    <!--Page header-->
+    <div class="jumbotron page-title">
+        <h1 class="page-title">@ViewBag.Description</h1>
+    </div>
+    
+    <!--Navbar-->
+    <ul class="nav nav-tabs">
+        <li>@Html.ActionLink("Index", "Index")</li>
+        <li>@Html.ActionLink("Browse all", "Browse")</li>
+        <li class="active">@Html.ActionLink("Search by description", "FindByDesc")</li>
+        <li>@Html.ActionLink("Suggest new meme", "SuggestNewMeme")</li>
+        <li>@Html.ActionLink("About", "About")</li>
+        <li>@Html.ActionLink("Contact", "Contact")</li>
+    </ul>
+
+    <!--Description form-->
+    @using (Html.BeginForm("FindByDesc", "Home", FormMethod.Post))
+    {
+
+        <div class="form-group">
+
+            @Html.AntiForgeryToken()
+            <div class="text-field">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+          
+            <input type="submit" value="Find" class="btn btn-success" />
+
+        </div>
+    }
+
+    <!--Display message if needed-->
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <h2 class="alert-danger">@ViewBag.ErrorMessage</h2>
+    }
+
+</div>
+

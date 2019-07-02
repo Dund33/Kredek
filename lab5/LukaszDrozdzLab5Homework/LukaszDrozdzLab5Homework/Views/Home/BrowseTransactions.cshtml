@@ -1,0 +1,70 @@
+﻿@model IEnumerable<LukaszDrozdzLab5Homework.Models.FullTransactionViewModel>
+
+@{
+    ViewData["Title"] = "BrowseTransactions";
+}
+
+<h2>Przeglądaj transakcje</h2>
+
+<!--Present user with a list of trnsactions-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Rodzaj węgla
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PESEL)
+            </th>
+            <th>
+                Nr. faktury
+            </th>
+            <th>
+                Imię
+            </th>
+            <th>
+                Nazwisko
+            </th>
+            <th>
+                Ilość węgla
+            </th>
+            <th>
+                Podatek
+            </th>
+            <th>
+                Cena bez podatku
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PESEL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountOfCoal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

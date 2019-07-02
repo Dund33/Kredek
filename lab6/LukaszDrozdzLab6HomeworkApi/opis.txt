@@ -1,0 +1,17 @@
+﻿Api jest prostym archiwum memów
+Akcje udokumentowane są w swaggerze
+Użytymi przeze mnie atrybutami walidacyjnymi są
+Url
+Email
+Required
+MinLength
+MaxLength
+dwa ostatnie liczę za 1 gdyż używam ich w parze (String length według swaggera ustawia zakres tolerowanych długości)
+Po uruchomieniu w VisualStudio domyślną stroną jest swagger/index.html (ułatwienie sprawdzania :>)
+API ma domyślnie jednego użytkownika
+Do dodania/usunięcia/modyfikacji mema konieczny jest token generowany przez server
+Uzyskuje się go wysyłając login i hasło do metody Auth
+login: dzida 
+pass: jbzd
+Właściwie to tyle
+Mam nadzieję że o niczym nie zapomniałem :>

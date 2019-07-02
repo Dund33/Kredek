@@ -1,0 +1,53 @@
+﻿WERSJA 0.01 - LAB1
+Program oparty jest na motywie zarządzania akademikiem.
+Po uruchomieniu aplikacji ukzauje nam się ekran na który wyświetlane są dane o obecnie posiadanych zasobach.
+Zasoby podzielone są na tiery.
+Zasoby wyższego tieru możemy kupić używając zasobów niższego tieru.
+Zasoby niższego tieru są generowane przez zasoby tieru wyższego.
+
+Okno główne porgramu posiada pasek narzędzi za którego pomocą możemy uzyskać dostęp do okna 'Upgrades'.
+W oknie tym możemy zakupić ulepszenia wydajności generowania surowców.
+
+
+Program co jakiś czas generuje zdarzenia losowe polegające na utracie części zasobów.
+Skutki możemy minimalizować poprzez umiejętne zarządzanie zasobami.
+Dodatkowo pojawiają się zdarzenia warunkowe będące bezpośrednim efektem złego zarządzania akademikami.
+
+Informacje o wersji programu wraz z tematyczną grafiką(grafika jest royalty free) znajdują się w oknie About dostępnym z paska narzędziowego okna głównego.
+
+WERSJA 0.02 - OBECNA
+
+Schemat przedstawienia surowców został zmieniony na obiektowy
+Zasoby są reprezentowane przez oddzielne klasy dziedziczące z klasy Resource
+Zasoby posiadają odnośniki do wszystkich elementów interfwjsu użytkownika których używają
+oraz zajmują się całą logiką.
+(zwiększenie poziomu abstrakcji z punktu widzenia klasy głównej)
+
+Dodano lepszy system zarządzania zdarzeniami
+Możliwe jest teraz dodanie nowego wydarzenia losowego albo zależnego od ilości zasobów
+za pomocą jednej linijki kodu
+
+Dodano wykres przedstawiający obecną strukturę posiadanych zasobów
+Jest aktualizownay na bieżąco
+
+
+ODPOWIEDZI NA MOŻLIWE PYTANIA:
+
+Dlaczego nie interfejs IGenerated nie ma żadnych funkcji?
+Interfejsy w C# na razie nie wspierają funkcji domyślnych a nie chciało mi się 
+implementować tej samej funkcji w kilku klasach tylko po to żeby użyć interfejsu do
+zagwarantowania jej zaimplementowania
+
+Dlaczego ustawiam część pól klas za pomocą właściwości a nie konstruktorów?
+Klasy reprezentujące surowce wymagają referencji do klas reprezentujących inne surowce.
+Często dochodzi do sytuacji gdy obiekty klas posiadają referencje do siebie na wzajem.
+Jeżeli miałbym ustawiać te wartości w konstruktorze to którą klasę należy utworzyć jako pierwszą?
+
+Dlaczego każdy surowiec posiada własną klasę?
+Dla niektórych surowców istniała potrzeba nadpisania metod zaimplementowanych jako virtual w klasie nadrzędnej
+(znacznie mniej kodu do napisania)
+
+Dlaczego nie ma w klasie głównej żadnej funkcji odpowiedzialnej za obsługę kupowania i ulepszania surowców?
+Cała logika jest obsługiwana na poziomie klas
+
+

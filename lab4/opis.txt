@@ -1,0 +1,11 @@
+﻿Strona jest prostą "bazą" memów.
+Zawiera podstawowe animacje zrealizowane z uzyciem biblioteki jQuery.
+Z powodu braku wiedzy o bazach danych nie mogłem ich użyc do przechowywania memów więc dodawanie i modyfikowanie
+ich listy jest obecnie niemożliwe.
+Możliwe jest natomiast zgłoszenie propozycji dodania nowego mema.
+Propozycja ta pojawia sie w logach serwera.
+
+Strona sama w sobie posiada 8 widoków.
+Część z nich jest używana przez kilka kontrolerów (DisplayMeme i DisplayMemes) dla zmniejszenia ilości kodu.
+Strona zawiera ponadto proste zabezpieczenie przeciwko "spamowaniu" propozycjami wprowadzenia nowych memów.
+Jest ono zrealizowane z pomocą TempData

@@ -1,0 +1,46 @@
+﻿@model List<MemeViewModel>
+@{
+    ViewData["Title"] = "Browse";
+}
+
+<!--Include scripts-->
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <script src="~/js/site.js"></script>
+</head>
+
+
+<!--required by bootstrap-->
+<div class="container">
+    <!--Page header-->
+    <div class="jumbotron page-title">
+        <h1 class="page-title">@ViewBag.Description</h1>
+    </div>
+
+    <!--Navbar-->
+    <ul class="nav nav-tabs">
+        <li>@Html.ActionLink("Index", "Index")</li>
+        <li class="active">@Html.ActionLink("Browse all", "Browse")</li>
+        <li>@Html.ActionLink("Search by description", "FindByDesc")</li>
+        <li>@Html.ActionLink("Suggest new meme", "SuggestNewMeme")</li>
+        <li>@Html.ActionLink("About", "About")</li>
+        <li>@Html.ActionLink("Contact", "Contact")</li>
+    </ul>
+
+    <!--Display memes-->
+    <ul class="list-group meme-list">
+        @foreach (var meme in Model)
+        {
+            <li class="list-group-item meme-container">
+                <h2>@meme.Title</h2>
+                <a href=@Url.Action("FindByID", new {id = meme.ID})>
+                    <img class="meme-thumbnail" src="@meme.Image" alt="@meme.Title" />
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
+

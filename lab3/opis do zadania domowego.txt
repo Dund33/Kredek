@@ -1,0 +1,5 @@
+Strona jest prostym tłumaczem porównującym podane zdanie ze zdaniami znajdującymi się w bazie danych(w pliku zewnętrznym).
+Wyniki wyświetlane są w formie wygodnej tabeli.
+Porównywaną wartością jest długość najdłuższego wspólnego podciągu poszukiwanego wyrażenia i wyrażenia znalezionego w bazie
+Stronka zawiera easter egg
+Wyjątkowo łatwy do znalezienia :>
